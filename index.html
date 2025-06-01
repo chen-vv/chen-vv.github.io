@@ -4,11 +4,16 @@
     <title>Website Title</title>
   </head>
   <body>
-    <h1>QR Code</h1>
+    <h1>QR Code Stuff</h1>
     <label for="inputImage">Choose an image:</label>
-    <input type="file" id="inputImage" />
+    <input type="file" id="inputImage" accept="image/*" />
     <p id="errorText"></p>
+    <p id="qrData">Data:</p>
     <div id="imagePreview"></div>
+    <div style="width: 500px" id="reader"></div>
+    <div id="qrReader" width="200px" height="200px"></div>
+    <canvas id="canvas" style="display: none"></canvas>
   </body>
-  <script src="app.js"></script>
+  <script src="./jsQR.js"></script>
+  <script src="app.js" type="module"></script>
 </html>
