@@ -1,7 +1,6 @@
-const inputImage = document.getElementById("inputImage");
-const preview = document.getElementById("imagePreview");
-const errorText = document.getElementById("errorText");
-const qrData = document.getElementById("qrData");
+const inputImage = document.getElementById("choose-image-button");
+const preview = document.getElementById("image-preview");
+const outputData = document.getElementById("output-data");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -21,7 +20,7 @@ inputImage.addEventListener(
 
     if (fileList.length === 0) {
       errorText.textContent = "No image selected";
-      qrData.textContent = "";
+      outputData.textContent = "";
       return;
     }
 
@@ -57,10 +56,10 @@ inputImage.addEventListener(
       const qrCode = jsQR(imageData.data, imageData.width, imageData.height);
 
       if (qrCode) {
-        qrData.textContent = qrCode.data;
+        outputData.textContent = qrCode.data;
         console.log("Found QR code", qrCode);
       } else {
-        qrData.textContent = "No QR code found";
+        outputData.textContent = "No QR code found";
       }
 
       URL.revokeObjectURL(objectUrl);

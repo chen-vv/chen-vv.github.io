@@ -1,0 +1,43 @@
+
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    background-color: #EEEEEE;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+h1,h2,h3 {
+    line-height: 1.2
+}
+
+button {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: black;
+    font-weight: 700;
+    font-size: 16px;
+    background: white;
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#choose-image-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#choose-image-icon {
+    max-width: 30%;
+    height: auto;
+}
