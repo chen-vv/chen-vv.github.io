@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -13,28 +13,21 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
+    <h1>QR Code Reader</h1>
+    <p id="intro">Fast. Offline. Works on tiny screens.</p>
     <div class="container">
-      <div class="item">
-        <h1>Scan a QR Code</h1>
-        <p>Fast. Offline. Works on tiny screens.</p>
-        <button id="choose-image-button">
-          <img
-            src="assets/choose-image.png"
-            alt="Choose an image icon"
-            id="choose-image-icon"
-          />
-          <p>Choose image</p>
-        </button>
-        <p id="output-data"></p>
-        <div id="image-preview"></div>
-        <div style="width: 500px" id="reader"></div>
-        <div id="qrReader" width="200px" height="200px"></div>
-        <canvas id="canvas" style="display: none"></canvas>
-        <a target="_blank" href="https://icons8.com/icon/0uYcfoG9OUaw/image"
-          >Image</a
-        >
-        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-      </div>
+      <button id="choose-image-button">
+        <img
+          src="assets/choose-image.png"
+          alt="Choose an image icon"
+          id="choose-image-icon"
+        />
+        <p id="choose-image-text">Choose image</p>
+      </button>
+      <input type="file" id="file-input" style="display: none" />
+      <canvas id="canvas" style="display: none"></canvas>
+      <div id="input-preview"></div>
+      <div id="output-preview"></div>
     </div>
   </body>
   <script src="./jsQR.js"></script>
