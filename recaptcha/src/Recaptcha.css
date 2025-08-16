@@ -1,0 +1,50 @@
+.Recaptcha {
+  width: 380px;
+}
+
+.blue-box {
+  background-color: #1a74ec;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.captcha-text-smaller {
+  font-family: "Roboto";
+  font-size: calc(6px + 1vmin);
+  margin: 0;
+  padding: 0;
+}
+
+.captcha-text-regular {
+  font-family: "Roboto";
+  font-size: calc(2vmin);
+  margin: 0;
+  padding: 0;
+}
+
+.captcha-text-bold {
+  font-family: "Roboto";
+  font-size: calc(14px + 2vmin);
+  font-weight: bold;
+  margin-block: 3px;
+  padding: 0;
+}
+
+.grid {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    place-items: center;
+    padding: 5px;
+}
+
+.grid-item {
+    background-color: red;
+    aspect-ratio: 1;
+    width: 100%;
+}
