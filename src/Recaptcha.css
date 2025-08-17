@@ -13,21 +13,21 @@
 }
 
 .captcha-text-smaller {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;;
   font-size: calc(6px + 1vmin);
   margin: 0;
   padding: 0;
 }
 
 .captcha-text-regular {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;;
   font-size: calc(2vmin);
   margin: 0;
   padding: 0;
 }
 
 .captcha-text-bold {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;;
   font-size: calc(14px + 2vmin);
   font-weight: bold;
   margin-block: 3px;
@@ -66,7 +66,7 @@
   width: 100px;
   height: 40px;
   border-radius: 2px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;;
   font-weight: 500;
   font-size: 14px;
 }
