@@ -1,5 +1,5 @@
 .Recaptcha {
-  width: 380px;
+  width: calc(380px + 5vmin);
 }
 
 .blue-box {
@@ -44,7 +44,8 @@
 }
 
 .grid-item {
-    background-color: red;
     aspect-ratio: 1;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
