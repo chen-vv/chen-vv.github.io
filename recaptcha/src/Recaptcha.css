@@ -49,3 +49,27 @@
     height: 100%;
     object-fit: cover;
 }
+
+.buttons-box {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.info-button {
+
+}
+
+.next-button {
+  background-color: #1a74ec;
+  color: #ffffff;
+  border: none;
+  padding-inline: 36px;
+  padding-block: 14px;
+  border-radius: 2px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+}

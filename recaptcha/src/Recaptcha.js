@@ -21,7 +21,10 @@ const Recaptcha = () => {
           ></img>
         ))}
       </div>
-      <div>bottom buttons</div>
+      <div className="buttons-box">
+        <button className="info-button">info</button>
+        <button className="next-button">SKIP</button>
+      </div>
     </div>
   );
 };
