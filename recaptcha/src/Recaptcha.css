@@ -59,12 +59,12 @@
   font-size: 30px;
 }
 
-.next-button {
+.proceed-button {
   background-color: #1a74ec;
   color: #ffffff;
   border: none;
-  padding-inline: 36px;
-  padding-block: 14px;
+  width: 100px;
+  height: 40px;
   border-radius: 2px;
   font-family: 'Roboto';
   font-weight: 500;

@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./ImageTile.css";
 
-const ImageTile = (imageSrc, index) => {
+const ImageTile = ({ imageSrc, index, selectedCallback }) => {
   const [selected, setSelected] = useState(false);
 
-  const toggleSelection = ({ imageSrc }) => {
+  const toggleSelection = () => {
     setSelected(!selected);
+    selectedCallback(index);
   };
 
   return (
@@ -16,7 +17,7 @@ const ImageTile = (imageSrc, index) => {
       <img src={imageSrc} key={index} className="tile-image" />
       {selected && (
         <div className="checkmark">
-          <span class="material-symbols-outlined">check</span>
+          <span className="material-symbols-outlined">check</span>
         </div>
       )}
     </div>
