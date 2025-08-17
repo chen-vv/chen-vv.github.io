@@ -1,5 +1,6 @@
 .Recaptcha {
   width: calc(380px + 5vmin);
+  padding: 20px;
 }
 
 .blue-box {

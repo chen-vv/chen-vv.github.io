@@ -5,7 +5,6 @@ import Recaptcha from "./Recaptcha";
 function App() {
   return (
     <div className="App">
-      <p>Welcome to my chaotic website</p>
       <Recaptcha />
     </div>
   );
