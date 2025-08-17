@@ -1,5 +1,5 @@
-import React from "react";
 import "./Recaptcha.css";
+import ImageTile from "./ImageTile";
 
 const Recaptcha = () => {
   const images = Array.from({ length: 9 });
@@ -13,16 +13,12 @@ const Recaptcha = () => {
         <p className="captcha-text-regular">If there are none, click skip</p>
       </div>
       <div className="grid">
-        {images.map((_, index) => (
-          <img
-            src={`/images/chihuahua_muffin/${index + 1}.JPG`}
-            key={index}
-            className="grid-item"
-          ></img>
-        ))}
+        {images.map((_, index) =>
+          ImageTile(`/images/chihuahua_muffin/${index + 1}.JPG`, index)
+        )}
       </div>
       <div className="buttons-box">
-        <button className="info-button">info</button>
+        <span class="material-symbols-outlined info-button">info</span>
         <button className="next-button">SKIP</button>
       </div>
     </div>
