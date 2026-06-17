@@ -53,11 +53,26 @@
   padding: 10px;
 }
 
-.info-button {
+.icon {
   background-color: #ffffff;
   color: #727272;
   border: none;
+  padding-inline: 4px;
   font-size: 30px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:hover {
+  opacity: 0.7;
 }
 
 .proceed-button {
