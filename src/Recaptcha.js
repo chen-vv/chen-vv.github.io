@@ -49,6 +49,14 @@ const Recaptcha = () => {
     }
   };
 
+  const handleRefresh = () => {
+    console.log("hi");
+  };
+
+  const handleInfo = () => {
+    console.log("TODO: Show info");
+  };
+
   return imageFolder ? (
     <div className="Recaptcha">
       <div className="blue-box">
@@ -68,7 +76,14 @@ const Recaptcha = () => {
         </div>
       }
       <div className="buttons-box">
-        <span className="material-symbols-outlined info-button">info</span>
+        <div>
+          <button onClick={handleRefresh} className="icon-button">
+            <span className="material-symbols-outlined icon">refresh</span>
+          </button>
+          <button onClick={handleInfo} className="icon-button">
+            <span className="material-symbols-outlined icon">info</span>
+          </button>
+        </div>
         <button className="proceed-button" onClick={onProceed}>
           {selectedImageIds.length === 0 ? "SKIP" : "VERIFY"}
         </button>
