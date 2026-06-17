@@ -8,18 +8,29 @@ const Recaptcha = () => {
   const images = Array.from({ length: 9 });
   const [selectedImageIds, setSelectedImageIds] = useState([]);
   const [imageFolder, setImageFolder] = useState(null);
+  const [imageFolderIndex, setImageFolderIndex] = useState(0);
 
   useEffect(() => {
+    fetchImages();
+  }, []);
+
+  const fetchImages = () => {
     fetch("/data.json")
       .then((res) => res.json())
       .then((json) => {
         // Choose a random folder
-        setImageFolder(
-          json.recaptchas[Math.floor(Math.random() * json.recaptchas.length)]
-        );
+        var newIndex = Math.floor(Math.random() * json.recaptchas.length);
+
+        while (imageFolderIndex === newIndex) {
+          newIndex = Math.floor(Math.random() * json.recaptchas.length);
+        }
+
+        setImageFolderIndex(newIndex);
+
+        setImageFolder(json.recaptchas[imageFolderIndex]);
       })
       .catch((err) => console.error(err));
-  }, []);
+  };
 
   const onImageSelected = (imageId) => {
     console.log(`${imageId} was selected`);
@@ -43,14 +54,15 @@ const Recaptcha = () => {
         }
       }
 
-      alert("Good job, human!");
+      handleRefresh();
     } else {
       alert("Bot has failed the reCAPTCHA.");
     }
   };
 
   const handleRefresh = () => {
-    console.log("hi");
+    setSelectedImageIds([]);
+    fetchImages();
   };
 
   const handleInfo = () => {
@@ -70,6 +82,7 @@ const Recaptcha = () => {
             <ImageTile
               imageSrc={`/images/${imageFolder.folderName}/${index + 1}.JPG`}
               index={`${index + 1}.JPG`}
+              selected={selectedImageIds.includes(`${index + 1}.JPG`)}
               selectedCallback={onImageSelected}
             />
           ))}

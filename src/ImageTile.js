@@ -1,11 +1,8 @@
 import { useState } from "react";
 import "./ImageTile.css";
 
-const ImageTile = ({ imageSrc, index, selectedCallback }) => {
-  const [selected, setSelected] = useState(false);
-
+const ImageTile = ({ imageSrc, index, selected, selectedCallback }) => {
   const toggleSelection = () => {
-    setSelected(!selected);
     selectedCallback(index);
   };
 
