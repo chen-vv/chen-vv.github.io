@@ -49,14 +49,15 @@ const Recaptcha = () => {
     if (selectedImageIds.length === correctIds.length) {
       for (const id of correctIds) {
         if (selectedImageIds.includes(id) === false) {
-          alert("Bot has failed the reCAPTCHA.");
+          alert("You failed the reCAPTCHA. Are you a bot?");
           return;
         }
       }
 
+      alert("Good job!");
       handleRefresh();
     } else {
-      alert("Bot has failed the reCAPTCHA.");
+      alert("You failed the reCAPTCHA. Are you a bot?");
     }
   };
 
