@@ -92,10 +92,10 @@ const Recaptcha = () => {
       <div className="buttons-box">
         <div>
           <button onClick={handleRefresh} className="icon-button">
-            <span className="material-symbols-outlined icon">refresh</span>
+            <img src="/icons/refresh.png" classname="icon" alt="Refresh"></img>
           </button>
           <button onClick={handleInfo} className="icon-button">
-            <span className="material-symbols-outlined icon">info</span>
+            <img src="/icons/info.png" classname="icon" alt="Info"></img>
           </button>
         </div>
         <button className="proceed-button" onClick={onProceed}>
