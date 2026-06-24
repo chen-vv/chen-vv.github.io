@@ -1,7 +1,19 @@
+@font-face {
+  font-family: latinModernMonoLight;
+  src: url(fonts/lmmonoproplt10-light.otf);
+}
 
+@font-face {
+  font-family: latinModernMono;
+  src: url(fonts/lmmonoprop10-regular.otf);
+}
 
 .App {
-  background-color: #aaaaaa;
+  background-color: lightblue;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  display: flex;
 }
 
 .App-logo {
@@ -29,6 +41,73 @@
 .App-link {
   color: #61dafb;
 }
+
+.profile-column {
+  flex: 50%;
+  padding-left: 25%;
+  padding-right: 25%;
+  
+}
+
+#full-name {
+  font-family: latinModernMono;
+  font-size: 400%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.links-column {
+  flex: 50%;
+  padding: 25%;
+}
+
+.row {
+  display: flex;
+}
+
+.rounded-rect-icon {
+  height: auto; 
+  width: auto; 
+  max-width: 50px; 
+  max-height: 50px;
+  border: none;
+  padding-inline: 4px;
+}
+
+.rounded-rect-button {
+  background-color: rgb(240, 240, 240);
+  min-width: 160%;
+  min-height: auto;
+  width: fit-content;
+  height: auto;
+  padding: 0;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  gap: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  border: 2px solid black;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 5px 10px #888888;
+}
+
+.rounded-rect-button img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.rounded-rect-button:hover {
+  background-color: white;
+  transform: scale(1.03);
+}
+
 
 @keyframes App-logo-spin {
   from {
