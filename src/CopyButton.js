@@ -1,0 +1,69 @@
+import React, { useState } from 'react';
+
+export default function CopyButton({ textToCopy = "placeholder-text-to-copy" }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      setCopied(true);
+      
+      setTimeout(() => setCopied(false), 1600);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
+
+  return (
+    <button
+      onClick={handleCopy}
+      aria-label={copied ? "Copied to clipboard" : "Copy to clipboard"}
+      title={copied ? "Copied!" : "Copy to clipboard"}
+      style={buttonStyles}
+    >
+      {copied ? (
+        // Checkmark Icon
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#239b37"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      ) : (
+        // Copy / Clipboard Icon
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+      )}
+    </button>
+  );
+}
+
+// Inline styles for quick preview
+const buttonStyles = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '8px',
+  borderRadius: '6px',
+  border: '1px solid transparent',
+  backgroundColor: 'transparent',
+  cursor: 'pointer',
+  transition: 'all 0.2s ease',
+};

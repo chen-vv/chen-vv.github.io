@@ -38,13 +38,24 @@
 .profile-column {
   flex: 50%;
   padding-left: 25%;
+  margin-right: 100px;
 }
 
-#full-name {
+.title {
   font-family: latinModernMono;
   font-size: 400%;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.subtitle {
+  font-family: latinModernMono;
+  font-size: 180%;
+  margin-block: 0;
+}
+
+.underlined {
+  text-decoration: underline;
 }
 
 .links-column {
@@ -52,9 +63,13 @@
   padding-right: 15%;
 }
 
-.row {
+.profile-row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.button-row {
   display: flex;
-  justify-content: space-evenly;
 }
 
 .rounded-rect-icon {
