@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: latinModernMonoLight;
   src: url(fonts/lmmonoproplt10-light.otf);
@@ -12,23 +16,11 @@
   background-color: rgb(238, 224, 189);
   width: 100vw;
   height: 100vh;
-  align-items: center;
-  display: flex;
-}
-
-.App-header {
-  background-color: #aaaaaa;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  align-items: center;
+  gap: 5%;
 }
 
 * {
@@ -36,21 +28,22 @@
 }
 
 .profile-column {
-  flex: 50%;
-  padding-left: 25%;
-  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
   font-family: latinModernMono;
-  font-size: 400%;
+  font-size: 280%;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .subtitle {
   font-family: latinModernMono;
-  font-size: 180%;
+  font-size: 150%;
   margin-block: 0;
 }
 
@@ -59,17 +52,15 @@
 }
 
 .links-column {
-  flex: 50%;
-  padding-right: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-row {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.button-row {
-  display: flex;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  width: 100%;
 }
 
 .rounded-rect-icon {
@@ -78,15 +69,15 @@
   max-width: 50px; 
   max-height: 50px;
   border: none;
-  padding-inline: 4px;
 }
 
 .rounded-rect-button {
   background-color: rgb(240, 240, 240);
-  min-height: auto;
-  width: 300px;
-  max-width: 300px;
   height: auto;
+  min-height: auto;
+  width: fit-content;
+  min-width: 300px;
+  max-width: 70%;
   padding: 0;
   border: none;
   padding: 10px;
@@ -114,3 +105,48 @@
   background-color: white;
   transform: scale(1.03);
 }
+
+/* CSS styles for tablet screens and larger */
+@media (min-width: 768px) {
+  .App {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: 300%;
+  }
+
+  .subtitle {
+    font-size: 200%;
+  }
+}
+
+.email-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+/* CSS styles for desktop */
+@media (min-width: 1024px) {
+  .App {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: 400%;
+  }
+
+  .profile-column {
+    margin-right: 100px;
+  }
+
+  .subtitle {
+    font-size: 220%;
+  }
+
+  .rounded-rect-button {
+    width: 300px;
+    max-width: 300px;
+  }
+}
+

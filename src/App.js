@@ -9,7 +9,7 @@ const openInNewTab = (url) => {
 
 function App() {
   const email = "vickychen0192@gmail.com";
-  
+
   return (
     <div className="App">
         <div className="profile-column">
@@ -18,32 +18,25 @@ function App() {
           </div>
           <div className="profile-row">
             <p className="subtitle">Full-Stack Software Engineer</p>
-            <div className="button-row">
+            <div className="email-row">
               <p className="subtitle underlined">{email}</p>
               <CopyButton textToCopy={email}/>
             </div>
-            
           </div>
         </div>
         <div className="links-column">
-          <div className="button-row">
-              <button className="rounded-rect-button" onClick={() => {window.open("/resume.pdf", "_blank")}}>
-                  <img src="/icons/document.png" className="rounded-rect-icon" alt="Document"></img>
-                  <h2>Resume</h2>
-              </button>
-          </div>
-          <div className="button-row">
-              <button className="rounded-rect-button" onClick={() => openInNewTab("https://github.com/chen-vv")}>
-                  <img src="/icons/github.svg" className="rounded-rect-icon" alt="Document"></img>
-                  <h2>GitHub</h2>
-              </button>
-          </div>
-          <div className="button-row">
-              <button className="rounded-rect-button" onClick={() => openInNewTab("https://www.linkedin.com/in/chen-vv/")}>
-                  <img src="/icons/linkedin.png" className="rounded-rect-icon" alt="Document"></img>
-                  <h2>LinkedIn</h2>
-              </button>
-          </div>
+            <button className="rounded-rect-button" onClick={() => {window.open("/resume.pdf", "_blank")}}>
+                <img src="/icons/document.png" className="rounded-rect-icon" alt="Document"></img>
+                <h2>Resume</h2>
+            </button>
+            <button className="rounded-rect-button" onClick={() => openInNewTab("https://github.com/chen-vv")}>
+                <img src="/icons/github.svg" className="rounded-rect-icon" alt="Document"></img>
+                <h2>GitHub</h2>
+            </button>
+            <button className="rounded-rect-button" onClick={() => openInNewTab("https://www.linkedin.com/in/chen-vv/")}>
+                <img src="/icons/linkedin.png" className="rounded-rect-icon" alt="Document"></img>
+                <h2>LinkedIn</h2>
+            </button>
         </div>
       {/* <Recaptcha /> */}
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./CopyButton.css";
 
 export default function CopyButton({ textToCopy = "placeholder-text-to-copy" }) {
   const [copied, setCopied] = useState(false);
@@ -16,10 +17,10 @@ export default function CopyButton({ textToCopy = "placeholder-text-to-copy" }) 
 
   return (
     <button
+    id='copy-email-button'
       onClick={handleCopy}
       aria-label={copied ? "Copied to clipboard" : "Copy to clipboard"}
       title={copied ? "Copied!" : "Copy to clipboard"}
-      style={buttonStyles}
     >
       {copied ? (
         // Checkmark Icon
@@ -54,16 +55,3 @@ export default function CopyButton({ textToCopy = "placeholder-text-to-copy" }) 
     </button>
   );
 }
-
-// Inline styles for quick preview
-const buttonStyles = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: '8px',
-  borderRadius: '6px',
-  border: '1px solid transparent',
-  backgroundColor: 'transparent',
-  cursor: 'pointer',
-  transition: 'all 0.2s ease',
-};
