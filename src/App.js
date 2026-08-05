@@ -14,7 +14,7 @@ function App() {
         </div>
         <div className="links-column">
           <div className="row">
-              <button className="rounded-rect-button">
+              <button className="rounded-rect-button" onClick={() => {window.open("/resume.pdf", "_blank")}}>
                   <img src="/icons/document.png" className="rounded-rect-icon" alt="Document"></img>
                   <h2>Resume</h2>
               </button>
