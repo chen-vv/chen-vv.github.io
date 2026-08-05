@@ -9,7 +9,7 @@
 }
 
 .App {
-  background-color: lightblue;
+  background-color: rgb(238, 224, 189);
   width: 100vw;
   height: 100vh;
   align-items: center;
@@ -42,11 +42,13 @@
   color: #61dafb;
 }
 
+* {
+  color: rgb(112, 69, 13);
+}
+
 .profile-column {
   flex: 50%;
   padding-left: 25%;
-  padding-right: 25%;
-  
 }
 
 #full-name {
@@ -58,11 +60,12 @@
 
 .links-column {
   flex: 50%;
-  padding: 25%;
+  padding-right: 15%;
 }
 
 .row {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .rounded-rect-icon {
@@ -76,9 +79,9 @@
 
 .rounded-rect-button {
   background-color: rgb(240, 240, 240);
-  min-width: 160%;
   min-height: auto;
-  width: fit-content;
+  width: 300px;
+  max-width: 300px;
   height: auto;
   padding: 0;
   border: none;
@@ -90,10 +93,10 @@
   align-items: center;
   justify-content: center;
   border-radius: 25px;
-  border: 2px solid black;
+  border: 3px solid rgb(138, 86, 17);
   text-align: center;
   text-decoration: none;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px rgb(138, 86, 17);
 }
 
 .rounded-rect-button img {

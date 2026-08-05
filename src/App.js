@@ -9,11 +9,8 @@ const openInNewTab = (url) => {
 function App() {
   return (
     <div className="App">
-      <div className="row">
         <div className="profile-column">
-          <div className="row">
             <p id="full-name">Vicky Chen</p>
-          </div>
         </div>
         <div className="links-column">
           <div className="row">
@@ -35,7 +32,6 @@ function App() {
               </button>
           </div>
         </div>
-      </div>
       {/* <Recaptcha /> */}
     </div>
   );
