@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -64,9 +66,9 @@
 }
 
 .rounded-rect-icon {
-  height: auto; 
-  width: auto; 
-  max-width: 50px; 
+  height: auto;
+  width: auto;
+  max-width: 50px;
   max-height: 50px;
   border: none;
 }
@@ -122,9 +124,9 @@
 }
 
 .email-row {
-    display: flex;
-    flex-direction: row;
-  }
+  display: flex;
+  flex-direction: row;
+}
 
 /* CSS styles for desktop */
 @media (min-width: 1024px) {
@@ -149,4 +151,3 @@
     max-width: 300px;
   }
 }
-

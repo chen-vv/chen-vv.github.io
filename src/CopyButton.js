@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./CopyButton.css";
 
-export default function CopyButton({ textToCopy = "placeholder-text-to-copy" }) {
+export default function CopyButton({
+  textToCopy = "placeholder-text-to-copy",
+}) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(textToCopy);
       setCopied(true);
-      
+
       setTimeout(() => setCopied(false), 1600);
     } catch (err) {
       console.error("Failed to copy text: ", err);
@@ -17,7 +19,7 @@ export default function CopyButton({ textToCopy = "placeholder-text-to-copy" }) 
 
   return (
     <button
-    id='copy-email-button'
+      id="copy-email-button"
       onClick={handleCopy}
       aria-label={copied ? "Copied to clipboard" : "Copy to clipboard"}
       title={copied ? "Copied!" : "Copy to clipboard"}

@@ -101,7 +101,7 @@ fileInput.addEventListener(
       URL.revokeObjectURL(objectUrl);
     };
   },
-  false
+  false,
 );
 
 /**
