@@ -32,11 +32,26 @@ function App() {
           }}
         >
           <img
-            src="/icons/document.png"
+            src="/icons/notebook.png"
             className="rounded-rect-icon"
-            alt="Document"
+            alt="Notebook with decorative cover"
           ></img>
           <h2>Resume</h2>
+        </button>
+        <button
+          className="rounded-rect-button"
+          onClick={() =>
+            openInNewTab(
+              "https://drive.google.com/drive/folders/1U7gZctlvD5EIcfTJOzvSkFeeirbEVa4u?usp=drive_link",
+            )
+          }
+        >
+          <img
+            src="/icons/puzzle.png"
+            className="rounded-rect-icon"
+            alt="Green puzzle piece"
+          ></img>
+          <h2>Projects</h2>
         </button>
         <button
           className="rounded-rect-button"
@@ -45,7 +60,7 @@ function App() {
           <img
             src="/icons/github.svg"
             className="rounded-rect-icon"
-            alt="Document"
+            alt="GitHub logo"
           ></img>
           <h2>GitHub</h2>
         </button>
@@ -56,12 +71,11 @@ function App() {
           <img
             src="/icons/linkedin.png"
             className="rounded-rect-icon"
-            alt="Document"
+            alt="LinkedIn logo"
           ></img>
           <h2>LinkedIn</h2>
         </button>
       </div>
-      {/* <Recaptcha /> */}
     </div>
   );
 }
